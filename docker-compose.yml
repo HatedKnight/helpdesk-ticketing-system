@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  osticket:
+    image: campbellsoftwaresolutions/osticket
+    depends_on:
+      - db
+    ports:
+      - "8080:80"
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_USER=osticket_user
+      - MYSQL_PASSWORD=test123
+      - MYSQL_DATABASE=osticket
+
+  db:
+    image: mariadb:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=sheldor098
+      - MYSQL_USER=osticket_user
+      - MYSQL_PASSWORD=test123
+      - MYSQL_DATABASE=osticket
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
+
