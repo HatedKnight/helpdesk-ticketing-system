@@ -19,6 +19,6 @@ This repository contains the necessary configuration files to deploy an osTicket
 
 ## Updating osTicket
 
-1- docker-compose down
-2- docker pull campbellsoftwaresolutions/osticket
-3- docker-compose up -d
+1. docker-compose down
+2. docker pull campbellsoftwaresolutions/osticket
+3. docker-compose up -d
